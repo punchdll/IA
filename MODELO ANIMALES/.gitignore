@@ -1,0 +1,10 @@
+.env
+salida
+sportimages
+*.jpeg
+*.png
+*.webm
+*.mkv
+test_images/*.jpg
+test_images/*.png
+!animales/
