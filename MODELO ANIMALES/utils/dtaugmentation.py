@@ -49,4 +49,4 @@ def aumentar_datos(dir_entrada, dir_salida, multiplicador=5):
     print(f"Completado. Originales: {len(rutas_img)}. Generadas en total: {imagenes_generadas}.")
 
 if __name__ == '__main__':
-    aumentar_datos("animales/ranas", "animales/ranas_aumentadas", multiplicador=40)
+    aumentar_datos("../animales/ballenas", "../animales/ballenas", multiplicador=40)

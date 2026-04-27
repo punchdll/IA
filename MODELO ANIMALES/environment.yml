@@ -12,6 +12,7 @@ dependencies:
   - opencv
   - scikit-image
   - albumentations
+  - pillow
   - pip:
       - tensorflow
       - httpx
