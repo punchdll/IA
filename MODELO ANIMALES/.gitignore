@@ -7,4 +7,5 @@ sportimages
 *.mkv
 test_images/*.jpg
 test_images/*.png
-!animales/
+modelos/
+animales/
