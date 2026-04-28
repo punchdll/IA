@@ -1,6 +1,6 @@
-.env
-salida
-sportimages
+.env/
+salida/
+sportimages/
 *.jpeg
 *.png
 *.webm
