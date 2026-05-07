@@ -2,17 +2,21 @@ name: cnn
 channels:
   - conda-forge
 dependencies:
-  - python=3.11
-  - numpy
-  - scipy
-  - scikit-learn
-  - matplotlib
-  - jupyterlab
+  - python=3.10
   - pip
-  - opencv
+
+  - numpy
+  - pandas
+  - matplotlib
+  - scikit-learn
+  - seaborn
+  - scipy
   - scikit-image
-  - albumentations
-  - pillow
+
+  # Jupyter stack
+  - jupyter
+  - notebook
+  - ipykernel
+  - ipywidgets
   - pip:
-      - tensorflow
-      - httpx
+      - tensorflow==2.15.0
