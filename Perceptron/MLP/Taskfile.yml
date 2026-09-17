@@ -1,0 +1,34 @@
+version: '3'
+
+vars:
+  SOURCE_FILE: main.go
+  FLAGS: -w -s
+  BINARY_NAME: MLP
+  REL_DIR: release
+
+tasks:
+  build-release:
+    desc: Build a release binary
+    cmds:
+      - cmd: go build -ldflags="{{.FLAGS}}" -o {{.REL_DIR}}/{{.BINARY_NAME}} {{.SOURCE_FILE}}
+        platforms: [linux]
+    silent: true
+    deps: [configure]
+
+  configure:
+    desc: Configure environment
+    cmds:
+      - cmd: mkdir -p {{.REL_DIR}}
+        platforms: [linux, darwin]
+      - cmd: New-Item -ItemType Directory -Force -Path {{.REL_DIR}}
+        platforms: [windows]
+    silent: true
+
+  clean:
+    desc: Clean files
+    cmds:
+      - cmd: rm -rf {{.REL_DIR}}
+        platforms: [linux, darwin]
+      - cmd: Remove-Item -Recurse -Force {{.REL_DIR}} -ErrorAction SilentlyContinue
+        platforms: [windows]
+    silent: true
